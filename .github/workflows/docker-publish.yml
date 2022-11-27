@@ -26,7 +26,7 @@ jobs:
       run:
         # docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         # docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 961097743373.dkr.ecr.ap-south-1.amazonaws.com
+        # aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 961097743373.dkr.ecr.ap-south-1.amazonaws.com
         docker build -t practice-1 .
         docker tag practice-1:latest 961097743373.dkr.ecr.ap-south-1.amazonaws.com/practice-1:latest
         docker push 961097743373.dkr.ecr.ap-south-1.amazonaws.com/practice-1:latest
